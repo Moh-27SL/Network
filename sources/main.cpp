@@ -91,21 +91,8 @@ double** load_labels_all(const string& folder, const string& split, int count) {
     return labels;
 }
 
-#include <iostream>
-#include <fstream>
-#include <vector>
-#include <string>
-#include <cassert>
-#include <cstdint>
-#include "../headers/Network.hpp"
-#include "../headers/NeuralTrainer.hpp"
-
-using namespace std;
-
-// (… your load_npy_uint8, flatten_images, load_labels_all as before …)
-
 int main() {
-    string folder = "mhsma-dataset-master\\mhsma\\"; //set it up
+    string folder = "../mhsma-dataset-master/mhsma/"; //set it up
 
     // — Load and flatten training images —
     vector<unsigned char> flat_train;
