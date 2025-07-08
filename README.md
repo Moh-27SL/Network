@@ -8,15 +8,15 @@ This is a simple neural network implementation in C++ designed to detect and cla
 _Features_
 
 - Fully custom neural network implementation (no deep learning frameworks)
-- 
+
 - Multilabel binary classification using sigmoid + binary cross-entropy loss
-- 
+ 
 - Batch training with learning rate decay and L2 regularization
-- 
+ 
 - OpenBLAS acceleration for matrix operations
-- 
+ 
 - Per-sample input normalization for improved stability
-- 
+ 
 - Accuracy metrics per label and overall
 
 **Dataset**
@@ -27,22 +27,22 @@ This project uses the MHMSA dataset, which contains labeled grayscale images of 
 Make sure you have:
 
 - A C++ compiler (e.g. MinGW on Windows)
-- 
+  
 - [OpenBLAS](https://www.openblas.net/) installed
-- 
+  
 - [stb_image](https://github.com/nothings/stb) headers for PNG loading
-- 
+  
 - You can build the project using Code::Blocks or a standard Makefile with OpenBLAS linked.
 
 **Training**
 Training is performed over a set number of epochs with options for:
 
 - Batch size
-- 
+  
 - Learning rate
-- 
+  
 - Regularization factor
-- 
+  
 - Early stopping (WIP)
 
 **License**
