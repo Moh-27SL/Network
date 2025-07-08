@@ -102,12 +102,12 @@ double** load_labels_all(const string& folder, const string& split, int count) {
 
 using namespace std;
 
-// (… your load_npy_uint8, flatten_images, load_labels_all as before …)
+// (â€¦ your load_npy_uint8, flatten_images, load_labels_all as before â€¦)
 
 int main() {
-    string folder = "E:\\mohammed\\neural networks\\sperm_detektion\\mhsma-dataset-master\\mhsma\\";
+    string folder = "mhsma-dataset-master\\mhsma\\"; //set it up
 
-    // — Load and flatten training images —
+    // â€”Â Load and flatten training images â€”
     vector<unsigned char> flat_train;
     vector<unsigned long> shape_train;
     load_npy_uint8(folder + "x_64_train.npy", flat_train, shape_train);
@@ -119,7 +119,7 @@ int main() {
                 images[i][y][x] = flat_train[i * H * W + y * W + x];
     double** inputs = flatten_images(images);
 
-    // — Load multilabel targets —
+    // â€”Â Load multilabel targets â€”
     double** labels = load_labels_all(folder, "train", N);
 
         // Add this in main() after loading labels:
@@ -132,7 +132,7 @@ int main() {
     }
 
 
-    // — Build your network & trainer —
+    // â€”Â Build your network & trainer â€”
     int netMap[] = {64*64, 30, 4};
     Network net(3, netMap);
 
@@ -140,7 +140,7 @@ int main() {
     trainer.setInputs(inputs, N);
     trainer.SetreqOut(labels);
 
-    // — Train with a smaller eta and smaller batch size —
+    // â€”Â Train with a smaller eta and smaller batch size â€”
     trainer.train(
       /*epochs*/       100,
       /*eta*/          3,
@@ -148,11 +148,11 @@ int main() {
       /*miniBatchSize*/32
     );
 
-    // — Store trained model & loss curve —
+    // â€”Â Store trained model & loss curve â€”
     net.store("sperm_detector_multilabel.nun");
     trainer.storeLoss("sperm_detector_multilabel_graph.bin");
 
-    // — Compute per–label accuracy on TRAINING set —
+    // â€”Â Compute perâ€“label accuracy on TRAINING set â€”
     int M = net.getOutputSize();        // should be 4
     vector<int> correct(M, 0), total(M, 0);
 
@@ -173,7 +173,7 @@ int main() {
         cout << "  " << names[k] << ": " << acc << "%\n";
     }
 
-    // — Overall multilabel exact-match accuracy —
+    // â€”Â Overall multilabel exact-match accuracy â€”
     int exactMatch = 0;
     for (int i = 0; i < N; ++i) {
         double* out = net.output(inputs[i]);
