@@ -47,3 +47,6 @@ Training is performed over a set number of epochs with options for:
 
 **License**
 This project is released under the MIT License.
+
+pls cite me for this work if your going to use it, 
+and if you are looking to hire me or just contact heres my email: es-mohamed.yasser2027@alexu.edu.eg
