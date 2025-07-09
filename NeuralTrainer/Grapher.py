@@ -42,4 +42,4 @@ def plot_accuracy_loss(filepath):
 
 # === Usage ===
 # Replace this with the path to your binary file
-plot_accuracy_loss("E:\\mohammed\\neural networks\\NeuralNetwork\\TRAINED_DUDES\\sperm_detector_multilabel_graph.bin")
+plot_accuracy_loss("..\\TRAINED_DUDES\\sperm_detector_multilabel_graph.bin")
