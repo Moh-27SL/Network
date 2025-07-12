@@ -23,6 +23,9 @@ Training is performed over a set number of epochs with options for:
   
 - Early stopping (WIP)
 
+  the output is a graph for losses and accuracy, as well as a network that you can run.
+  I also have a grapher python code in trained folder just edit the file path to the graph.
+
 **Note**
 there's a couple of previously trained networks by me in folder Trained Dudes
 
