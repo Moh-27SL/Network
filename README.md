@@ -7,8 +7,6 @@ Make sure you have:
 - A C++ compiler (e.g. MinGW on Windows)
   
 - [OpenBLAS](https://www.openblas.net/) installed
-  
-- You can build the project using Code::Blocks or a standard Makefile with OpenBLAS linked.
 
 **Training**
 Training is performed over a set number of epochs with options for:
