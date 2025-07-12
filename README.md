@@ -8,8 +8,6 @@ Make sure you have:
   
 - [OpenBLAS](https://www.openblas.net/) installed
   
-- [stb_image](https://github.com/nothings/stb) headers for PNG loading
-  
 - You can build the project using Code::Blocks or a standard Makefile with OpenBLAS linked.
 
 **Training**
